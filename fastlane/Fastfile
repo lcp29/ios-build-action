@@ -15,7 +15,6 @@ platform :ios do
   desc "Build"
   lane :build do
     use_workspace = !ENV['WORKSPACE_PATH'].empty?
-    enable_automatic_code_signing(path: ENV['PROJECT_PATH'])
     build_app(
       workspace: use_workspace ? ENV['WORKSPACE_PATH'] : nil,
       project: !use_workspace ? ENV['PROJECT_PATH'] : nil,
