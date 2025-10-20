@@ -28,11 +28,7 @@ platform :ios do
       export_team_id: ENV['TEAM_ID'],
       silent: true,
       skip_codesigning: true,
-      export_options: ENV['IOS_APP_ID'] != nil ? {
-        provisioningProfiles: {
-          "#{ENV['IOS_APP_ID']}" => "match AppStore #{ENV['IOS_APP_ID']}",
-        },
-      } : nil
+      export_options: nil
     )
   end
 
