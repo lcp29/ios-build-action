@@ -20,18 +20,12 @@ platform :ios do
       project: !use_workspace ? ENV['PROJECT_PATH'] : nil,
       configuration: ENV['CONFIGURATION'],
       scheme: ENV['SCHEME'],
-      output_directory: File.dirname(ENV['OUTPUT_PATH']),
-      output_name: File.basename(ENV['OUTPUT_PATH']),
-      clean: true,
-      result_bundle: true,
-      export_method: ENV['EXPORT_METHOD'],
-      export_team_id: ENV['TEAM_ID'],
+      derived_data_path: ENV['OUTPUT_PATH'],
       skip_package_ipa: true,
       skip_archive: true,
-      destination: "generic/platform=iOS Simulator",
+      destination: "generic/platform=iOS",
       silent: true,
-      skip_codesigning: true,
-      export_options: nil
+      skip_codesigning: true
     )
   end
 
