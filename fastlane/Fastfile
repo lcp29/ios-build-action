@@ -26,7 +26,9 @@ platform :ios do
       result_bundle: true,
       export_method: ENV['EXPORT_METHOD'],
       export_team_id: ENV['TEAM_ID'],
+      skip_package_ipa: true,
       skip_archive: true,
+      destination: "generic/platform=iOS Simulator",
       silent: true,
       skip_codesigning: true,
       export_options: nil
