@@ -25,7 +25,7 @@ platform :ios do
       clean: true,
       export_method: ENV['EXPORT_METHOD'],
       export_team_id: ENV['TEAM_ID'],
-      skip_archive: true
+      skip_archive: true,
       silent: true,
       skip_codesigning: true,
       export_options: nil
