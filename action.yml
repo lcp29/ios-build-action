@@ -5,14 +5,6 @@ branding:
   color: "white"
 description: "Build iOS project (.xcodeproj, .xcworkspace), export .ipa, optional upload to BrowserStack App Live."
 inputs:
-  upload-to-testflight:
-    description: "Upload to TestFlight."
-    required: false
-    default: false
-  increment-build-number:
-    description: "Increment build number."
-    required: false
-    default: false
   project-path:
     description: "Project path"
     required: true
@@ -21,15 +13,6 @@ inputs:
     required: true
   team-name:
     description: "Team name"
-    required: true
-  apple-key-id:
-    description: "Apple key id"
-    required: true
-  apple-key-issuer-id:
-    description: "Apple key issuer id"
-    required: true
-  apple-key-content:
-    description: "Apple key content"
     required: true
   workspace-path:
     description: "Workspace path"
@@ -53,38 +36,6 @@ inputs:
     default: ""
   update-targets:
     description: "Targets to be updated with mobileprovision, code signing identity, etc"
-    required: false
-    default: ""
-  build-pods:
-    description: "Boolean to tell if `pod install` should be run during build."
-    required: false
-    default: false
-  pods-path:
-    description: "The path to the Podfile."
-    required: false
-    default: "Podfile"
-  match-password:
-    description: "The password to decrypt certificates."
-    required: true
-  match-git-url:
-    description: "The git url where match can find the certificates."
-    required: true
-  match-git-basic-authorization:
-    description: "The basic authorization to access the repository."
-    required: true
-  match-build-type:
-    description: "The build type to use when building the app."
-    required: true
-  browserstack-upload:
-    description: "Boolean to tell the Action to upload the .ipa to Browserstack App Live after the build."
-    required: false
-    default: false
-  browserstack-username:
-    description: "Browserstack username (required if browserstack-upload == true)"
-    required: false
-    default: ""
-  browserstack-access-key:
-    description: "Browserstack access key (required if browserstack-upload == true)"
     required: false
     default: ""
   fastlane-version:
